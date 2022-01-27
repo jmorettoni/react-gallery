@@ -26,7 +26,7 @@ export default class GalleryGrid extends Component {
 					   {
 						imgsGallery.map(imgItem => (
 							<li key={imgItem.link} style={{ display:'inline' , marginLeft:'10px'}}>
-							 	<a  href="{imgItem.link}" target="_blank">
+							 	<a  href={imgItem.link} target="_blank">
 								    <img src={imgItem.img}  width="130" /> 
 								 </a>
 							</li>
