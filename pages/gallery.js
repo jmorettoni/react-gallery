@@ -6,9 +6,7 @@ import GalleryGrid from '../components/GalleryGrid';
  {}
 export default function Gallery() {
 	return (
-	 <div>
-
-
+	 <div> 
 		   <h1>GALLERY</h1>
 		 
 	        {' '}

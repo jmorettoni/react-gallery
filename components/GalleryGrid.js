@@ -20,8 +20,7 @@ const imgsGallery = [
 export default class GalleryGrid extends Component {
 	render() {
 	return (
-	 <div>
-  
+	 <div> 
 					<ul  >
 					   {
 						imgsGallery.map(imgItem => (
