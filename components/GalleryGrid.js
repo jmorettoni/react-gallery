@@ -13,6 +13,10 @@ const imgsGallery = [
 	{
 		img: '/img/gallery-floriano/praia-de-itaipu.jpg',
 		link: "https://musicpro.live/#3"
+	},
+	{
+		img: '/img/gallery-floriano/praia-de-itaipu2.jpg',
+		link: "https://musicpro.live/#3"
 	}
   ];
  
