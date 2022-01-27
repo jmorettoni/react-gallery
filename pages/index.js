@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
+import styles from '../styles/Home.module.css'
+ 
 import Link from 'next/link'
+
  
 
 export default function Home() {
@@ -19,14 +21,16 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a> 
         </h1>
  
- 
- 
-		<h1 className="title">
-		  {' '}
-		  <Link href="/gallery">
-		    <a>VER GALERIA</a>
-		  </Link>
-		</h1>
+      
+      
+          <h1 className="titleGallery">
+            {' '}
+            <Link href="/gallery">
+              <a>VER GALERIA</a>
+            </Link>
+          </h1>
+
+          
 		  
 		  
         <p className={styles.description}>
