@@ -16,7 +16,7 @@ export const Container = styled.header`
     width: 100%;
 
     border: 0;
-    border-top: 1px solid rgb(75, 74, 74);
+    border-top: 1.5px solid rgb(75, 74, 74);
   }
 `;
 

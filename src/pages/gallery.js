@@ -3,7 +3,6 @@ import { GalleryArtistProfile } from '../components/Gallery/ArtistProfile';
 import { GalleryFooter } from '../components/Gallery/Footer';
 import { GalleryGridImages } from '../components/Gallery/Grid';
 import { GalleryHeader } from '../components/Gallery/Header';
-import { GalleryGrid } from '../components/GalleryGrid'
 
 import { Container } from '../styles/gallery';
 
@@ -21,7 +20,6 @@ const Gallery = () => {
       </Link>
 
       <GalleryFooter />
-
     </Container>
   )
 }

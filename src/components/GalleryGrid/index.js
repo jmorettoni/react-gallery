@@ -1,5 +1,5 @@
 import React from 'react';
-import { GalleryImage } from '../Gallery/Grid/styles';
+import { GalleryImage } from './styles';
 
 
 const imgsGallery = [
@@ -44,13 +44,15 @@ export const GalleryGrid = () => {
 
       {
         imgsGallery.map(imgItem => (
-          <ul>
-            <li key={imgItem.link}>
-              <a href={imgItem.link} >
-                <img src={imgItem.img} />
-              </a>
-            </li>
-          </ul>
+          <a href={imgItem.link}>
+            <img src={imgItem.img} />
+          </a>
+            // <li key={imgItem.link}>
+            //   <a href={imgItem.link} >
+            //     <img src={imgItem.img} />
+            //   </a>
+            // </li>
+          
         ))
       }
 

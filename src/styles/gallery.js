@@ -7,4 +7,11 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
   }
+
+    @media (min-width: 1300px) {
+      display: flex;
+      flex-direction: column;
+
+      margin: 0;
+    }
 `;
