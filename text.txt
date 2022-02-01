@@ -1,5 +1,0 @@
-## Styled components
-yarn add styled-components
-
-## HTML
-bodies vao para a vala
