@@ -15,7 +15,6 @@ export const Container = styled.footer`
     width: 130px;
 
     padding: 25px 0 25px 0;
-    /* T R B L */  
   }
 
   p {

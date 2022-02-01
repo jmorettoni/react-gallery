@@ -14,8 +14,6 @@ export const Container = styled.section`
   p {
     color: #fff;
 
-    /* padding: 20px; */
-    /* margin-top: 1px; */
     padding: 0 20px;
     margin: 0 0 10px 0;
     
@@ -31,8 +29,6 @@ export const Container = styled.section`
     font-size: 40px;
 
     text-align: center;
-
-    /* margin: 30px 0 30px 0; */
 
     margin: 20px 0 0 0;
   }
@@ -131,7 +127,6 @@ export const ProfileIcons = styled.div`
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: row;
-
   }
 `;
 
