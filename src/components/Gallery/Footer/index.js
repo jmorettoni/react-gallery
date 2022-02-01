@@ -8,6 +8,5 @@ export const GalleryFooter = () => {
     <p>Copyright © 2021 por jmorettoni</p>
     <p>All rights reserved</p>
 
-
   </Container>;
 }

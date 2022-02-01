@@ -7,8 +7,7 @@ export const Container = styled.header`
 
   & > img {
     margin: 40px 0 25px 0;
-  
-    display: flex;
+
     justify-content: center;
   } 
 

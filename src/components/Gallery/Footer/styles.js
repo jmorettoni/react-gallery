@@ -19,17 +19,14 @@ export const Container = styled.footer`
 
   p {
     color: #ffffff;
-
     font-size: 10px;
+    font-family: Helvetica;
 
     margin-bottom: 2px;
     padding-bottom: 5px;
-
-    font-family: Helvetica;
   }
 
-  @media (min-width: 800px) {
-    display: flex;
+  @media (min-width: 800px) and (max-width: 1199px){
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -47,6 +44,10 @@ export const Container = styled.footer`
 
   @media (min-width: 1200px) {
     padding: 25px 60px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
     p {
       font-size: 14px;

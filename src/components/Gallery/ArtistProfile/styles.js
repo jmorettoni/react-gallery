@@ -4,24 +4,20 @@ export const Container = styled.div`
   border: 2px solid rgb(75, 74, 74);
   border-radius: 20px;
 
-  margin: 20px 90px; 
+  margin: 20px 60px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
+
   & > img {
     border-radius: 20px;
   }
 
   p {
-    color: #fff;
-
-    padding: 0 20px;
-    margin: 0 0 20px 0;
-    
     text-align: center;
 
     color: #ababab;
-    
     font-family: Helvetica;
   }
 
@@ -31,25 +27,19 @@ export const Container = styled.div`
 
     text-align: center;
 
-    margin: 20px 0 0 0;
+    margin: 20px 0 0 0; 
   }
+ 
 
-  /* @media (max-width: 499px) */
+  @media (min-width: 450px) and (max-width: 799px) {
+    margin: 20px auto;
 
-  @media (max-width: 799px) {
-    margin: 20px 60px;
+    width: 310px;
+  } 
 
-    h1 {
-      font-size: 40px;
-    }
+  @media (min-width: 800px) and (max-width: 999px){
+    margin: 20px 60px; 
 
-    & > img {
-      margin: 30px 30px 0 30px;
-      width: 100%;
-    }
-  }
-
-  @media (min-width: 800px) and (max-width: 1199px) {
     p {
       padding: 15px 30px 30px 30px; 
       margin: 0px;
@@ -58,12 +48,20 @@ export const Container = styled.div`
     & > img {
       margin: 30px 170px;
     }
+  } 
+
+  @media (min-width: 1000px) and (max-width: 1199px) {
+    
+    margin: 10px 150px;
+
+    & > img {
+      margin: 30px 190px;
+    }
   }
 
   @media (min-width: 1200px) {  
-    display: flex;
     flex-direction: row; 
-    padding: 20px;
+    padding: 30px;
 
     gap: 20px;
 
@@ -100,20 +98,16 @@ export const ProfileSocialNetworks = styled.div`
 
   margin: 15px 0 0 0;
 
-  @media (min-width: 800px) {
-    display: flex;
+  @media (min-width: 800px) and (max-width: 1199PX) {
     flex-direction: row;
     justify-content: center;
   }
 
   @media (min-width: 1200px) {
-    display: flex;
     flex-direction: row;
-
     justify-content: start;
 
     padding-left: 20px;
-
     margin: 0px;
   }
 
@@ -128,7 +122,7 @@ export const ProfileIcons = styled.div`
 `;
 
 export const ProfileLinkedinIcon = styled.div`
-  @media (min-width: 800px) {
+  @media (min-width: 800px) and (max-width: 1199px){
     width: 90px;
   }
 

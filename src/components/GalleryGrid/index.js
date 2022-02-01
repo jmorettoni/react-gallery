@@ -47,12 +47,7 @@ export const GalleryGrid = () => {
           <a href={imgItem.link}>
             <img src={imgItem.img} />
           </a>
-            // <li key={imgItem.link}>
-            //   <a href={imgItem.link} >
-            //     <img src={imgItem.img} />
-            //   </a>
-            // </li>
-          
+
         ))
       }
 
