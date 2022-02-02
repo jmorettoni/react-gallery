@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "RussoOne";
+  src: local('Russo_One.ttf') url('../../public/font/Russo_One.ttf');
+}
+
+body {
+  background: #121212;
+  font-family: "RussoOne";
+}
+
+h1.titleGallery{
+  background:purple;
+  color:#fff;
+}
+
+h1, 
+a {
+  color: #fff;
+}
