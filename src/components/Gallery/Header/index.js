@@ -30,6 +30,5 @@ export const GalleryHeader = () => {
 
     <hr />
 
-
   </Container>;
 }
