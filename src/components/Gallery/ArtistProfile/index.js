@@ -18,7 +18,6 @@ export const GalleryArtistProfile = () => {
           </a>
         </ProfileLinkedinIcon>
 
-
         <ProfileIcons>
           <a>
             <img src="/img/icons/facebook-icon.jpg" />
