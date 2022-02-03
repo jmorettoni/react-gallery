@@ -1,5 +1,5 @@
 import React from 'react';
-import { GalleryGrid } from '../../GalleryGrid'
+import { GalleryGrid } from '../GalleryGrid'
 
 import { Container } from './styles';
 
