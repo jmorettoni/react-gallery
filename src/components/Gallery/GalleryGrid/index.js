@@ -38,18 +38,21 @@ const imgsGallery = [
 ];
 
 
-export const GalleryGrid = () => {
+export const GalleryGrid = ({ estado }) => {
+
+
+  const gallerias = estado
+  console.log(gallerias)
   return (
     <GalleryImage >
 
-      {
-        imgsGallery.map(imgItem => (
-          <a href={imgItem.link}>
-            <img src={imgItem.img} />
-          </a>
+      {gallerias.map((galleria) =>
+        <a key={galleria.link}>
+          <img src={galleria.img_url} />
+        </a>
+      )}
 
-        ))
-      }
+
 
     </GalleryImage>
   )
