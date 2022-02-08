@@ -1,58 +1,38 @@
 import React from 'react';
+import { useEffect, useState } from "react";
+import axios from 'axios';
+
 import { GalleryImage } from './styles';
 
+export const GalleryGrid = () => {
+  const [estados, setEstados] = useState([]);
 
-const imgsGallery = [
-  {
-    img: '/img/gallery-floriano/praia-de-itaipu.png',
-    link: "https://musicpro.live/#1"
-  },
-  {
-    img: '/img/gallery-floriano/jovelina-perola-negra.png',
-    link: "https://musicpro.live/#2"
-  },
-  {
-    img: '/img/gallery-floriano/toca-da-gamba.png',
-    link: "https://musicpro.live/#3"
-  },
-  {
-    img: '/img/gallery-floriano/jovelina-perola-negra.png',
-    link: "https://musicpro.live/#4"
-  },
-  {
-    img: '/img/gallery-floriano/cartola.png',
-    link: "https://musicpro.live/#5"
-  },
-  {
-    img: '/img/gallery-floriano/pixinguinha.png',
-    link: "https://musicpro.live/#6"
-  },
-  {
-    img: '/img/gallery-floriano/cartola.png',
-    link: "https://musicpro.live/#7"
-  },
-  {
-    img: '/img/gallery-floriano/pixinguinha.png',
-    link: "https://musicpro.live/#8"
-  }
-];
+  useEffect(() => {
+    const req = async () => {
+      var config = {
+        method: 'post',
+        url: 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-fkaiw/endpoint/get_gallery?gallery_id=floriano-2',
+        headers: {}
+      };
+      const { data } = await axios(config)
 
+      setEstados(data)
 
-export const GalleryGrid = ({ estado }) => {
+      console.log(data)
+    }
 
+    req()
 
-  const gallerias = estado
-  console.log(gallerias)
+  }, [])
+
   return (
     <GalleryImage >
 
-      {gallerias.map((galleria) =>
-        <a key={galleria.link}>
-          <img src={galleria.img_url} />
+      {estados.map((estado) =>
+        <a key={estado.link}>
+          <img src={estado.img_url} />
         </a>
       )}
-
-
 
     </GalleryImage>
   )
