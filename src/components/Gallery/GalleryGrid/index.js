@@ -1,55 +1,50 @@
 import React from 'react';
+import { useEffect, useState } from "react";
+import axios from 'axios';
+
 import { GalleryImage } from './styles';
+ 
+import { useRouter } from 'next/router'
 
-
-const imgsGallery = [
-  {
-    img: '/img/gallery-floriano/praia-de-itaipu.png',
-    link: "https://musicpro.live/#1"
-  },
-  {
-    img: '/img/gallery-floriano/jovelina-perola-negra.png',
-    link: "https://musicpro.live/#2"
-  },
-  {
-    img: '/img/gallery-floriano/toca-da-gamba.png',
-    link: "https://musicpro.live/#3"
-  },
-  {
-    img: '/img/gallery-floriano/jovelina-perola-negra.png',
-    link: "https://musicpro.live/#4"
-  },
-  {
-    img: '/img/gallery-floriano/cartola.png',
-    link: "https://musicpro.live/#5"
-  },
-  {
-    img: '/img/gallery-floriano/pixinguinha.png',
-    link: "https://musicpro.live/#6"
-  },
-  {
-    img: '/img/gallery-floriano/cartola.png',
-    link: "https://musicpro.live/#7"
-  },
-  {
-    img: '/img/gallery-floriano/pixinguinha.png',
-    link: "https://musicpro.live/#8"
-  }
-];
-
-
+ 
 export const GalleryGrid = () => {
+
+ 
+  const [estados, setEstados] = useState([]);
+
+
+  const router = useRouter()
+  const { pid } = router.query
+
+ 
+  useEffect(() => {
+
+ 
+    const req = async () => {
+      var config = {
+        method: 'post',
+        url: 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-fkaiw/endpoint/get_gallery?slug='+pid ,
+        headers: {}
+      };
+      const { data } = await axios(config)
+
+      setEstados(data)
+
+      console.log(data)
+    }
+
+    req()
+
+  }, pid )
+
   return (
     <GalleryImage >
 
-      {
-        imgsGallery.map(imgItem => (
-          <a href={imgItem.link}>
-            <img src={imgItem.img} />
-          </a>
-
-        ))
-      }
+      {estados.map((estado) =>
+        <a key={estado.link}>
+          <img src={estado.img_url} />
+        </a>
+      )}
 
     </GalleryImage>
   )

@@ -7,7 +7,7 @@ export const GalleryGridImages = () => {
   return <Container>
 
     <h1>NFT COLLECTION</h1>
-    
+
     <GalleryGrid />
 
   </ Container>;
