@@ -9,6 +9,7 @@ export const Container = styled.header`
     margin: 40px 0 25px 0;
 
     justify-content: center;
+
   } 
 
   hr {

@@ -10,7 +10,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  & > img {
+  .creator_img {
     border-radius: 20px;
   }
 
@@ -45,7 +45,7 @@ export const Container = styled.div`
       margin: 0px;
     }
 
-    & > img {
+    .creator_img {
       margin: 30px 170px;
     }
   } 
@@ -54,40 +54,9 @@ export const Container = styled.div`
     
     margin: 10px 150px;
 
-    & > img {
+   .creator_img {
       margin: 30px 190px;
     }
-  }
-
-  @media (min-width: 1200px) {  
-    flex-direction: row; 
-    padding: 30px;
-
-    gap: 20px;
-
-    & > img {
-      margin-top: 0;
-
-      align-items: center;
-    }
-
-    p {
-      padding: 0px 20px 0 15px;
-
-      text-align: left;
-
-      line-height: 30px;
-    }
-  
-    h1 {
-      padding-left: 20px;
-      margin: 0;
-
-      text-align: left;
-
-      font-size: 45px;
-    }
-    
   }
 `;
 
@@ -109,6 +78,7 @@ export const ProfileSocialNetworks = styled.div`
 
     padding-left: 20px;
     margin: 0px;
+
   }
 
 `;
@@ -136,5 +106,37 @@ export const ProfileLinkedinIcon = styled.div`
 export const ProfileInformations = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
+
+  
+  @media (min-width: 1200px) {  
+    flex-direction: row; 
+    padding: 30px;
+
+    gap: 20px;
+
+    .creator_img  {
+      margin-top: 0;
+
+      align-items: center;
+    }
+
+    p {
+      padding: 0px 20px 0 15px;
+
+      text-align: left;
+
+      line-height: 30px;
+    }
+  
+    h1 {
+      padding-left: 20px;
+      margin: 0;
+
+      text-align: left;
+
+      font-size: 45px;
+    }
+    
+  }
 `;

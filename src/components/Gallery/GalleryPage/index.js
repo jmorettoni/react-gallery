@@ -7,7 +7,6 @@ import { GalleryGridImages } from '../Grid';
 import { GalleryArtistProfile } from '../ArtistProfile';
 import { GalleryFooter } from '../Footer';
 
-
 export const GalleryPage = () => {
 
   return <div>
