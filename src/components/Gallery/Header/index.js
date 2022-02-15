@@ -13,7 +13,7 @@ export const GalleryHeader = () => {
   useEffect(() => {
 
     const req = async () => {
-      var config = {
+      let config = {
         method: 'post',
         url: 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-fkaiw/endpoint/get_smartsite?slug=' + slug,
         headers: {}
@@ -33,7 +33,7 @@ export const GalleryHeader = () => {
 
     {estados.map((estado) =>
       <>
-        <img className='profile-photo' src={estado.image} />
+        <img className='profile-photo' src={estado.logo} />
 
         <IconsHeader>
           <a key={estado.link_facebook}>

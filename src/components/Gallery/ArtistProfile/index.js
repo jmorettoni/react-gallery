@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { ArtisteProfile, Container, ProfileIcons, ProfileInformations, ProfileLinkedinIcon, ProfileSocialNetworks } from './styles'
+import { ArtisteProfile, Container, CreatorImg, ProfileIcons, ProfileInformations, ProfileLinkedinIcon, ProfileSocialNetworks } from './styles'
 
 export const GalleryArtistProfile = () => {
   const [estados, setEstados] = useState([]);
@@ -12,7 +12,7 @@ export const GalleryArtistProfile = () => {
   useEffect(() => {
 
     const req = async () => {
-      var config = {
+      let config = {
         method: 'post',
         url: 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-fkaiw/endpoint/get_smartsite?slug=' + slug,
         headers: {}
@@ -34,7 +34,9 @@ export const GalleryArtistProfile = () => {
 
       <ProfileInformations>
 
-        <img className='creator_img' src={estado.image} />
+        <CreatorImg>
+          <img src={estado.creator_img} />
+        </CreatorImg>
 
         <div>
 
@@ -43,7 +45,7 @@ export const GalleryArtistProfile = () => {
           <ProfileSocialNetworks>
 
             <ProfileLinkedinIcon>
-              <a className="profile-social-networks_linkedin"
+              <a
                 key={estado.link_linkedin}>
                 <img src="/img/icons/linkedin-icon.png" />
               </a>

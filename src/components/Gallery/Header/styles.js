@@ -10,6 +10,7 @@ export const Container = styled.header`
 
     justify-content: center;
 
+    width: 160px;
   } 
 
   hr {

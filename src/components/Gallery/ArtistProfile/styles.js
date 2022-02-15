@@ -10,10 +10,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  .creator_img {
-    border-radius: 20px;
-  }
-
   p {
     text-align: center;
 
@@ -29,12 +25,22 @@ export const Container = styled.div`
 
     margin: 20px 0 0 0; 
   }
+
+  @media (max-width: 449px) {
+    h1 {
+      font-size: 30px;
+    }
+  }
  
 
   @media (min-width: 450px) and (max-width: 799px) {
     margin: 20px auto;
 
     width: 310px;
+
+    h1 {
+      font-size: 30px;
+    }
   } 
 
   @media (min-width: 800px) and (max-width: 999px){
@@ -44,18 +50,35 @@ export const Container = styled.div`
       padding: 15px 30px 30px 30px; 
       margin: 0px;
     }
-
-    .creator_img {
-      margin: 30px 170px;
-    }
   } 
 
   @media (min-width: 1000px) and (max-width: 1199px) {
-    
     margin: 10px 150px;
+  }
+`;
 
-   .creator_img {
+export const CreatorImg = styled.div`
+  margin: auto;
+
+  img {
+    border-radius: 20px;
+
+    width: 250px;
+
+    @media (min-width: 800px) and (max-width: 999px) {
+      margin: 30px 170px;
+    }
+
+    @media (min-width: 1000px) and (max-width: 1199px) {
       margin: 30px 190px;
+    }
+
+    @media (min-width: 1200px){
+      margin-top: 0;
+
+      align-items: center;
+
+      width: 300px;
     }
   }
 `;
@@ -114,12 +137,6 @@ export const ProfileInformations = styled.div`
     padding: 30px;
 
     gap: 20px;
-
-    .creator_img  {
-      margin-top: 0;
-
-      align-items: center;
-    }
 
     p {
       padding: 0px 20px 0 15px;

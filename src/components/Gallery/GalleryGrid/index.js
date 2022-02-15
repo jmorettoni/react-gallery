@@ -15,9 +15,8 @@ export const GalleryGrid = () => {
  
   useEffect(() => {
 
- 
     const req = async () => {
-      var config = {
+      let config = {
         method: 'post',
         url: 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-fkaiw/endpoint/get_gallery?slug='+slug ,
         headers: {}
